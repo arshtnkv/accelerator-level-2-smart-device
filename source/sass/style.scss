@@ -1,0 +1,30 @@
+@import "vendor/normalize";
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/btn";
+@import "blocks/link";
+@import "blocks/title";
+@import "blocks/logo";
+@import "blocks/custom-input";
+@import "blocks/custom-toggle";
+@import "blocks/intro";
+@import "blocks/advantages";
+@import "blocks/about";
+@import "blocks/offer";
+@import "blocks/offers";
+@import "blocks/feedback-form";
+@import "blocks/feedback";
+@import "blocks/menu";
+@import "blocks/contacts";
+@import "blocks/socials";
+@import "blocks/copyright";

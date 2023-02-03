@@ -1,0 +1,9 @@
+mixin feedback()
+  section#feedback.feedback
+    .container
+      .feedback__image
+        +img("content", "paper-plane", "png", 511, 288, "img")
+      .feedback__content
+        h2.feedback__title.title.title--h2.title--color-white Остались вопросы? Задайте&nbsp;их&nbsp;нам!
+        p.feedback__text.text Мы проконсультируем Вас бесплатно
+        +feedback-form().feedback__form

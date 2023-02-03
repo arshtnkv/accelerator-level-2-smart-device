@@ -1,0 +1,33 @@
+.offers {
+  background-color: $color-tangaroa;
+
+  .container {
+    padding-top: 110px;
+    padding-bottom: 130px;
+
+    @include vp-767 {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 370px));
+    grid-column-gap: 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 256px;
+      grid-column-gap: 0;
+      grid-row-gap: 25px;
+    }
+  }
+}

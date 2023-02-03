@@ -1,0 +1,16 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .footer__content
+      .container.container--xl
+        .footer__wrap
+          +logo("footer")
+          +socials(socialList)
+        +menu(menuList)
+        +contacts(contactsList)
+
+    .footer__copyright.copyright
+      .container.container--xl
+        p.text.protection Все права защищены
+        p.text.protection 1999-2018 SD Service Devices
+        a(class="link link--default" href="#") Условия конфиденциальности
+        p.text Developed by wow studio

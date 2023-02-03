@@ -1,0 +1,26 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Smart Device"
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html"
+
+block main
+  main
+    // Интро
+    +intro()
+    // Преимущества
+    +advantages()
+    // О нас
+    +about()
+    // Наше предложение
+    +offers(offersList)
+    // Форма обратной связи
+    +feedback()
+
+block modals
+  +modal("modal--form")(data-modal="form")
+    +modal-form(quizCoastModalData)

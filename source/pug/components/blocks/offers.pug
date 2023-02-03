@@ -1,0 +1,9 @@
+mixin offers(data)
+  section.offers
+    .container
+      h2.offers__title.title.title--h2.title--color-white Service Device предлагает следующие товары и&nbsp;услуги
+      ul.offers__list
+        each item in data
+          li.offers__item
+            +offer(item)
+

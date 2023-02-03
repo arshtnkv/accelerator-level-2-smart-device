@@ -1,0 +1,50 @@
+mixin advantages()
+  -
+    const advantagesList = [
+      {
+        icon: {
+          name: "wath",
+          width: 29,
+          height: 35
+        },
+        title: "Оперативные сроки",
+        text: "Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки"
+      },
+      {
+        icon: {
+          name: "hired",
+          width: 35,
+          height: 35
+        },
+        title: "Крупные поставщики",
+        text: "Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции."
+      },
+      {
+        icon: {
+          name: "detective",
+          width: 36,
+          height: 31
+        },
+        title: "Полная конфиденциальность",
+        text: "По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность."
+      },
+      {
+        icon: {
+          name: "tag",
+          width: 35,
+          height: 35
+        },
+        title: "Персонализация стоимости",
+        text: "Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену которая Вас устраивает."
+      },
+    ];
+
+  section.advantages
+    .container
+      h2.visually-hidden Преимущества работать с нами
+      ul.advantages__list
+        each item in advantagesList
+          li.advantages__item
+            +icon(item.icon.name, item.icon.width, item.icon.height)
+            h3.title.title--h3.title--color-blue !{item.title}
+            p.text !{item.text}

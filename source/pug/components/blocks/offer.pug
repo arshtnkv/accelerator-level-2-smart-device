@@ -1,0 +1,5 @@
+mixin offer(data)
+  a(class="offer", href=data.link)&attributes(attributes)
+    figure
+      +img(data.img.path, data.img.name, data.img.format, data.img.width, data.img.height, data.img.altText)
+      figcaption.title !{data.text}

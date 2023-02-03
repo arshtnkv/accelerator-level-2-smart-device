@@ -1,0 +1,9 @@
+mixin menu(data)
+  section.menu
+    details(open)
+      summary
+        h2.menu__title.title.title--h4 Разделы сайта
+      ul.menu__list
+        each item in data
+          li.menu__item
+            a(class="link link--default" href=item.href) !{item.text}

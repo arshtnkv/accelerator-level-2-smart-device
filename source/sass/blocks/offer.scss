@@ -1,0 +1,58 @@
+.offer {
+  position: relative;
+
+  &::after {
+    content: "\203A";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 63px;
+    height: 63px;
+    font-size: 20px;
+    color: $color-default-white;
+    background-color: $color-deep-sky-blue;
+    transition: background-color $trans-600, color $trans-600;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    position: absolute;
+    top: 30px;
+    left: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-default-white;
+  }
+
+  img {
+    opacity: 0.2;
+    transition: opacity $trans-600;
+
+    @include vp-767 {
+      width: 100%;
+      height: 256px;
+      object-fit: cover;
+    }
+  }
+
+
+  @include hover-focus {
+    img {
+      opacity: 1;
+      transition: opacity $trans-600;
+    }
+
+    &::after {
+      color: $color-deep-sky-blue;
+      background-color: $color-default-white;
+      transition: background-color $trans-600, color $trans-600;
+    }
+  }
+}

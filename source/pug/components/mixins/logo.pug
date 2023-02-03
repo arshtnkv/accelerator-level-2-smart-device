@@ -1,0 +1,10 @@
+mixin logo(mod)
+  div(class=`logo${mod ? `${` logo--`}${mod}` : ``}`)
+    +icon("logo", 52, 52)
+    .logo__wrapper
+      h3.logo__title.title.title--h3
+        if mod === "header"
+          | Smart device
+        else
+          | Service device
+        span умные технологии

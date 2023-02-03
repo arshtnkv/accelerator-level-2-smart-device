@@ -1,0 +1,65 @@
+.about {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 110px;
+
+    @include vp-767 {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    padding-left: 180px;
+
+    @include vp-767{
+      padding: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 170px;
+      height: 318px;
+      background-image: url("../img/content/2005.png");
+      background-repeat: no-repeat;
+      background-position: -30px 3px;
+      content: "";
+
+      @include vp-1023 {
+        top: -4px;
+        left: -6px;
+        height: 370px;
+        background-size: 246px 355px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    .btn {
+      width: 180px;
+      padding: 9px 20px;
+    }
+  }
+}

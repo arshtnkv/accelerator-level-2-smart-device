@@ -1,0 +1,53 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: auto auto 180px;
+    grid-column-gap: 50px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 40px;
+    }
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  &__item {
+    white-space: nowrap;
+
+    &:first-child {
+      svg {
+        width: 19px;
+        height: 14px;
+      }
+
+      & + li {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &:last-child {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+}

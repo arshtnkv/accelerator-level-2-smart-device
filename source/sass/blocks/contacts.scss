@@ -1,0 +1,53 @@
+.contacts {
+  summary {
+    margin-bottom: 25px;
+
+    @include vp-767 {
+      position: relative;
+      margin-bottom: 0;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 7px;
+        right: 2px;
+        width: 16px;
+        height: 1px;
+        background-color: #c4c4c4;
+        content: "";
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  details {
+    @include vp-767 {
+      cursor: pointer;
+      padding: 28px 20px;
+      border-top: 1px solid rgba($color-tangaroa, .2);
+    }
+
+    &[open] summary::after {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    color: $color-nordic;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-767 {
+      margin-top: 20px;
+    }
+  }
+}

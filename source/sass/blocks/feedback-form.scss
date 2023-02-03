@@ -1,0 +1,53 @@
+.feedback-form {
+  &__fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border: none;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include vp-767 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__fieldset--half-width {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+    }
+
+    .custom-input {
+      @include vp-767 {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      width: 100%;
+
+      @include hover-focus {
+        border-color: $color-default-white;
+        background-color: rgba($color-default-white, .2);
+        transition: background-color $trans-default;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.link {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  user-select: none;
+  white-space: nowrap;
+  transition: opacity $trans-default, color $trans-default;
+
+  &--default {
+    @include hover-focus {
+      color: rgba($color-tangaroa, 1);
+      transition: opacity $trans-default;
+    }
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+
+    @include vp-1023 {
+      span {
+        display: none;
+      }
+    }
+
+    svg {
+      margin-right: 15px;
+
+      @include vp-1023 {
+        margin-right: 0;
+      }
+    }
+
+    @include hover-focus {
+      color: $color-deep-sky-blue;
+      transition: color $trans-default;
+    }
+  }
+}

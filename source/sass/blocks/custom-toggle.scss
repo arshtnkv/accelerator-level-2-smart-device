@@ -1,0 +1,97 @@
+.custom-toggle {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+    clip: rect(0 0 0 0);
+  }
+
+  label {
+    position: relative;
+
+    padding-left: 33px;
+
+    cursor: pointer;
+
+    span {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  &--checkbox {
+    .custom-toggle__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 16px;
+      height: 16px;
+
+      border: 1.5px solid $color-default-white;
+
+      transition: background-color $trans-default;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 8px;
+        height: 5px;
+
+        border-left: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        transform: translate(-50%, -50%) rotate(-45deg);
+
+        transition: background-color $trans-default;
+      }
+    }
+  }
+
+  input:hover + .custom-toggle__icon {
+    background-color: rgba($color-default-white, .2);
+    transition: background-color $trans-default;
+  }
+
+  input:checked + .custom-toggle__icon {
+    &::before {
+      border-color: $color-default-white;
+    }
+  }
+
+  &.is-invalid {
+    label span {
+      color: $color-torch-red;
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+
+    &--invalid {
+      color: $color-torch-red;
+    }
+
+    &--valid {
+      color: $color-eucalyptus;
+    }
+  }
+}

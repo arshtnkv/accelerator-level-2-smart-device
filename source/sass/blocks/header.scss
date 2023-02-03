@@ -1,0 +1,15 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $color-default-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1410px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

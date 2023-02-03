@@ -1,0 +1,37 @@
+$color-default-black:                              #000000;
+$color-default-white:                              #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+$color-dim-gay:                                    #666666;
+$color-regent-gay:                                 #788891;
+$color-whisper:                                    #ebebeb;
+$color-very-light-grey:                            #cdcdcd;
+$color-tangaroa:                                   #1b2d37;
+$color-nordic:                                     #203c42;
+$color-deep-sky-blue:                              #00B2FF;
+$color-torch-red:                                  #ff1553;
+$color-eucalyptus:                                 #22b259;
+
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+$index: calc(1vw + 1vh);
+
+.text {
+  margin: 0;
+}
+
+$fz-default:                        16px;
+
+$roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+$roboto: "Roboto", "Arial", sans-serif;
+$ptmono: "PT Mono", "Arial", sans-serif;
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600:                         0.6s $tf-default;
+
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1440:                           1440px;

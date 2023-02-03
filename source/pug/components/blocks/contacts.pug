@@ -1,0 +1,12 @@
+mixin contacts(data)
+  section.contacts
+    details(open)
+      summary
+        h2.contacts__title.title.title--h4 Наш офис
+      ul.contacts__list
+        each item in data
+          li.contacts__item
+            if !item.href
+              p.text !{item.text}
+            else
+              a(class="link link--default" href=item.href) !{item.text}

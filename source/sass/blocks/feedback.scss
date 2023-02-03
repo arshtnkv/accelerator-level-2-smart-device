@@ -1,0 +1,57 @@
+.feedback {
+  color: $color-default-white;
+  background-color: $color-deep-sky-blue;
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.97fr 1.03fr;
+    grid-column-gap: 50px;
+    padding-top: 90px;
+    padding-bottom: 110px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+    }
+
+    @include vp-767 {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -19%;
+      left: -40%;
+      width: 140%;
+      height: 140%;
+      background-image: url("../img/svg/triangles.svg");
+      background-repeat: no-repeat;
+      background-position: 83.6% 100%;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}
